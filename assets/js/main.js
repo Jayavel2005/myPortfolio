@@ -145,7 +145,7 @@ themeButton.addEventListener("click", () => {
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
-  origin: "top",
+  origin: "bottom",
   distance: "60px",
   duration: 2500,
   delay: 400,
@@ -200,7 +200,7 @@ sr.reveal(`.services__title, services__button`, {
 sr.reveal(`.work__card`, {
   delay: 100,
   scale: 0.9,
-  origin: "bottom",
+  origin: "left",
   distance: "30px",
 });
 
