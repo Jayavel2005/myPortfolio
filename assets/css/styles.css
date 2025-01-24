@@ -317,11 +317,10 @@ body.light-theme {
   color: var(--title-color);
   margin-bottom: 0.25rem;
 }
-
-.home__education {
+.home__education{
   color: var(--text-color);
-  margin-bottom: 2.5rem;
 }
+
 
 .home__name {
   font-size: var(--biggest-font-size);
@@ -334,7 +333,7 @@ body.light-theme {
 
 .home__handle {
   justify-self: center;
-  width: 190px;
+  width: 119px;
   height: 293px;
   background: linear-gradient(
     180deg,
@@ -354,6 +353,7 @@ body.light-theme {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-top: 2.5rem;
 }
 
 .home__social,
