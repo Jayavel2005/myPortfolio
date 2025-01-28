@@ -234,7 +234,7 @@ body.light-theme {
   left: 30%;
   border-radius: 50%;
   z-index: 1000;
-  /* display: none; */
+  display: none;
   
 }
 
@@ -987,10 +987,7 @@ body.light-theme {
   .work__filters {
     column-gap: 0.25rem;
   }
-  .ball{
-    display: none;
-  }
-
+  
 }
 
 @media screen and (min-width: 435px) {
@@ -1090,9 +1087,7 @@ body.light-theme {
     width: 340px;
   }
 
-  .ball{
-    display: none;
-  }
+  
 
   /* .contact__info {
     grid-template-columns: 350px;
