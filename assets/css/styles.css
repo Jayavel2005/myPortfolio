@@ -234,6 +234,8 @@ body.light-theme {
   left: 30%;
   border-radius: 50%;
   z-index: 1000;
+  display: none;
+  
 }
 
 .ball::after {
@@ -985,6 +987,7 @@ body.light-theme {
   .work__filters {
     column-gap: 0.25rem;
   }
+
 }
 
 @media screen and (min-width: 435px) {

@@ -242,11 +242,12 @@ const coord = {
 }
 
 window.addEventListener("mousemove",(event)=>{
-    coord.x = event.clientX;
-    coord.y = event.clientY;
+    coord.x = event.pageX ;
+    coord.y = event.pageY ;
 
     ball.style.left = `${coord.x}px`;
     ball.style.top = `${coord.y}px`;
+    ball.style.display = "block";
 
     ball.animate({
       left : `${coord.x}px`,
