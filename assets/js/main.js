@@ -247,7 +247,7 @@ window.addEventListener("mousemove",(event)=>{
 
     ball.style.left = `${coord.x}px`;
     ball.style.top = `${coord.y}px`;
-    ball.style.display = "block";
+    
 
     ball.animate({
       left : `${coord.x}px`,
