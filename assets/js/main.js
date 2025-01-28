@@ -231,3 +231,30 @@ sr.reveal(`.footer, footer__container`, {
   origin: "bottom",
   distance: "30px",
 });
+
+// =============== cursor ball =====================
+
+const ball = document.querySelector(".ball");
+
+const coord = {
+  x : 0,
+  y : 0,
+}
+
+window.addEventListener("mousemove",(event)=>{
+    coord.x = event.clientX;
+    coord.y = event.clientY;
+
+    ball.style.left = `${coord.x}px`;
+    ball.style.top = `${coord.y}px`;
+
+    ball.animate({
+      left : `${coord.x}px`,
+      top : `${coord.y}px`,
+    },
+    {
+      fill : "forwards",
+      duration : 1700,
+    })
+    
+})
