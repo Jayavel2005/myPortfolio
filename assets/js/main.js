@@ -1,3 +1,35 @@
+// =============== cursor ball =====================
+
+const ball = document.querySelector(".ball");
+
+const coord = {
+  x : 0,
+  y : 0,
+}
+
+window.addEventListener("mousemove",(event)=>{
+    coord.x = event.pageX ;
+    coord.y = event.pageY ;
+
+    ball.style.left = `${coord.x}px`;
+    ball.style.top = `${coord.y}px`;
+    
+
+    ball.animate({
+      left : `${coord.x}px`,
+      top : `${coord.y}px`,
+    },
+    {
+      fill : "forwards",
+      duration : 1700,
+    })
+    
+})
+
+
+
+
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
   const header = document.getElementById("header");
@@ -133,6 +165,17 @@ if (selectedTheme) {
   );
 }
 
+const updateCursorBall = () =>{
+  if(document.body.classList.contains(lightTheme)){
+    ball.style.backgroundColor = "black";
+  }else{
+    ball.style.backgroundColor = "white";
+    
+  }
+}
+
+updateCursorBall();
+
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
   // Add or remove the light / icon theme
@@ -141,6 +184,7 @@ themeButton.addEventListener("click", () => {
   // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+  updateCursorBall();
 });
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
@@ -232,51 +276,3 @@ sr.reveal(`.footer, footer__container`, {
   distance: "30px",
 });
 
-// =============== cursor ball =====================
-
-const ball = document.querySelector(".ball");
-
-const coord = {
-  x : 0,
-  y : 0,
-}
-
-window.addEventListener("mousemove",(event)=>{
-    coord.x = event.pageX ;
-    coord.y = event.pageY ;
-
-    ball.style.left = `${coord.x}px`;
-    ball.style.top = `${coord.y}px`;
-    
-
-    ball.animate({
-      left : `${coord.x}px`,
-      top : `${coord.y}px`,
-    },
-    {
-      fill : "forwards",
-      duration : 1700,
-    })
-    
-})
-
-// ============ Home Name hover ==========
-let homeName = document.querySelector(".home__name");
-homeName.addEventListener("mouseenter",function(){
-  ball.style.width = "80px";
-  ball.style.height = "80px";
-  ball.style.backgroundColor = "transparent";
-  ball.style.borderWidth = "2px";
-  ball.style.boxShadow = "0 0 10px 10px rgba(105, 0, 105, 0.7)";
-})
-
-homeName.addEventListener("mouseleave",()=>{
-  ball.style.width = "20px";
-  ball.style.height = "20px";
-  ball.style.backgroundColor = "white";
-  ball.style.borderWidth = "1px";
-  ball.style.boxShadow = "none";
-
-
-
-})
