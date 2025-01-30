@@ -66,6 +66,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  cursor: none;
 }
 
 html {
@@ -84,6 +85,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: 0.4s;
+  overflow-x: hidden;
   /* for light mode animation */
 }
 
@@ -230,15 +232,18 @@ body.light-theme {
   height: 25px;
   border: 1.5px solid #ffffff;
   position: absolute;
+  background-color: white;
   top: 50%;
   left: 30%;
   border-radius: 50%;
   z-index: 1000;
   display: none;
+  pointer-events: none;
+  transition: 0.15s;
   
 }
 
-.ball::after {
+/* .ball::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -248,7 +253,7 @@ body.light-theme {
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 50%;
-}
+} */
 
 /*=============== HEADER & NAV===============*/
 .header {
@@ -356,6 +361,11 @@ body.light-theme {
   color: var(--first-color);
 }
 
+.home__name:hover ~ .ball{
+  width: 100px;
+  height: 100px;
+}
+
 .home__img {
   width: 160px;
 }
@@ -457,6 +467,10 @@ body.light-theme {
   background-color: transparent;
   color: var(--first-color);
   border: 1px solid var(--first-color);
+}
+.button--ghost:hover{
+  cursor: url("/myPortfolio/assets/favicons/favicon-16x16.png");
+
 }
 
 /*=============== ABOUT ===============*/

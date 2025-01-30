@@ -259,3 +259,24 @@ window.addEventListener("mousemove",(event)=>{
     })
     
 })
+
+// ============ Home Name hover ==========
+let homeName = document.querySelector(".home__name");
+homeName.addEventListener("mouseenter",function(){
+  ball.style.width = "80px";
+  ball.style.height = "80px";
+  ball.style.backgroundColor = "transparent";
+  ball.style.borderWidth = "2px";
+  ball.style.boxShadow = "0 0 10px 10px rgba(105, 0, 105, 0.7)";
+})
+
+homeName.addEventListener("mouseleave",()=>{
+  ball.style.width = "20px";
+  ball.style.height = "20px";
+  ball.style.backgroundColor = "white";
+  ball.style.borderWidth = "1px";
+  ball.style.boxShadow = "none";
+
+
+
+})
